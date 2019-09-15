@@ -8,12 +8,5 @@
 
 // var yourName = prompt('What\'s your name?');
 
-// alert(yourName);
+alert(yourName);
 
-// Coding Challenge 1 BMI
-
-var markHeight, markWeight, johnHeight, johnWeight;
-
-markHeight = 180;
-
-console.log ("mark's height is " + markHeight);
