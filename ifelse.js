@@ -1,19 +1,30 @@
-var weight = prompt("What\'s your weight?");
+// var weight = prompt("What\'s your weight?");
 
-document.write("Your weight is " + weight + "<br>");
+// document.write("Your weight is " + weight + "<br>");
 
-if(weight > 80) {
-    document.write("Uh oh, you are fat");
+// if(weight > 80) {
+//     document.write("Uh oh, you are fat");
+// } else {
+//     document.write("You're not fat");
+// } 
+
+var age = 17;
+
+if(age <= 12) {
+    document.write("You're a kid");
+} else if(age>12 && age<20) {
+    document.write("You're a teenager");
 } else {
-    document.write("You're not fat");
-} 
+    document.write("You're an adult");
+}
 
-var age = prompt("What\'s your age?");
+document.write("<br>");
 
-if (age > 13) {
-    document.write("<br>You're a man");
-} else if (age>13 && age<18) {
-    document.write("<br>You're a teenager");
+// var gay = confirm("By clicking ok you agree to being gay");
+gay = 0;
+
+if(gay == 1) {
+    document.write("You be gay homie");
 } else {
-    document.write("<br>You're a boy");
+    document.write("Why u be so homiephobic");
 }
