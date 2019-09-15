@@ -9,3 +9,4 @@ console.log (ageSafe);
 var yourName = prompt('What\'s your name?');
 
 alert(yourName);
+
