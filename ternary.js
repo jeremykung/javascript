@@ -3,7 +3,9 @@
 // Here is an example
 
 var age = 13
-age > 18 ? document.write("beer") : document.write("juice");
+document.write("age is set to " + age);
+
+age > 18 ? document.write("beer<br>") : document.write("juice<br>");
 
 age<18? console.log("no drinky for u") : console.log("gud");
 
@@ -12,3 +14,4 @@ age<18? console.log("no drinky for u") : console.log("gud");
 // Ternary structure then sets two outcomes for senior variable.
 // String can be written into document or console
 var senior = age >= 65 ? "You're a senior" : "You're a junior"; document.write(senior);
+
