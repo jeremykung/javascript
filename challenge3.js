@@ -9,25 +9,17 @@ Tips are 20% for under $50
 
 
 
-var bills = [124, 48, 268];
 
-function tipAmount(bill1, bill2, bill3) {
-    if(bill1 < 50) {
-        tipAmount = bill1 * 0.2;
-    } else if (bill1 > 200) {
-        tip1 = bill1 * 0.1;
+function tipAmount(bill) {
+    if (bill < 50) {
+        return bill * 0.20;
+    } else if (bill > 200) {
+        return bill * 0.10;
     } else {
-        tip1 = bill1 * 0.15;
+        return bill * 0.15;
     }
-    return tipAmount;
 }
 
-document.write(tipAmount);
+var tips = [124, 48, 268];
 
-
-
-// tipAmount(124, 48, 268);
-
-var tips = [tip1, tip2, tip3];
-
-document.write("Hi");
+document.write(tips);
