@@ -20,6 +20,23 @@ function tipAmount(bill) {
     }
 }
 
-var tips = [124, 48, 268];
+// bill prices stored in array 'bills'
+var bills = [124, 48, 268];
 
-document.write(tips);
+// tips as an array using a function to calculate the value
+var tips = [
+    tipAmount(bills[0]),   // 1st item in array 'bills'
+    tipAmount(bills[1]),   // 2nd item in array 'bills'
+    tipAmount(bills[2])    // 3rd item in array 'bills'
+];  
+
+document.write(tips + "<br>");
+
+// total to be paid
+var total = [
+    bills[0] + tips[0],
+    bills[1] + tips[1],
+    bills[2] + tips[2]
+]
+
+document.write(total);
