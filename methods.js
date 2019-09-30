@@ -1,4 +1,5 @@
 // METHODS are FUNCTIONS attached to OBJECTS
+// 'THIS' points to itself
 year = 2019;
 
 var jeremy = {
@@ -14,8 +15,14 @@ var jeremy = {
     // age: function(birthYear) {
     //     return year - this.birthYear;
     // }
-    // *** Using THIS for birthYear and to store age in object
+    // *** Using THIS to target local birthYear and to store 'age' in local object
+    calculateAge: function(birthYear) {
+        this.age = year - this.birthYear;
+    }
 }
 
-// document.write(jeremy.age(1990));
-document.write(jeremy.age(jeremy.birthYear));
+// Call the METHOD (function in object)
+jeremy.calculateAge();
+
+// Print to screen
+document.write(jeremy.age);

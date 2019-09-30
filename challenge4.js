@@ -3,15 +3,25 @@
 
 var john = {
     name: 'John',
-    mass: 50,
-    height: 170
+    mass: 60,
+    height: 170,
+    calcBMI: function(mass, height) {
+        this.bmi = this.mass / (this.height/100)**2;
+    }
 };
 
 var mike = {
     name: 'Mike',
-    mass: 60,
-    height: 180
+    mass: 70,
+    height: 180,
+    calculateBMI: function(mass, height) {
+        this.bmi = this.mass / (this.height/100)**2;
+    }
 };
 
-document.write(john);
-console.log(john);
+john.calcBMI();
+document.write("John's BMI: " + john.bmi + "<br>");
+
+mike.calculateBMI();
+document.write("Mike's BMI: " + mike.bmi);
+
