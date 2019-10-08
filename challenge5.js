@@ -39,8 +39,7 @@ var john = {
         for (var i = 0; i < this.tips.length; i ++) {
             this.total[i] = this.bills[i] + this.tips[i];
         }
-    },
-    averageTip: undefined
+    }
 };
 
 john.calculateTip();
@@ -83,8 +82,7 @@ var mark = {
         for (var i = 0; i < this.tips.length; i++) {
             this.total[i] = this.bills[i] + this.tips[i];
         }
-    },
-    averageTip: undefined
+    }
 };
 
 mark.calculateTip();
@@ -105,13 +103,35 @@ After you have the sum of the array, divide it by the number of elements in it (
 GOOD LUCK 😀
 */
 
-function calculateAverageTip(tips) {
-    for (var i = 0; i < tips.length; i++) {
-        totalTip += tips[i];
-    }
-    return totalTip / tips.length;
-}
+// Functions for average tip
 
-mark.averageTip = calculateAverageTip(mark.tips);
+function calculateAvgTip(tipsArray) {
 
-document.write(mark.averageTip);
+    var totalTip = 0;
+
+    for (var i = 0; i < tipsArray.length; i++) {
+        totalTip += tipsArray[i];
+    };
+
+    var avgTip = totalTip / tipsArray.length;
+
+    return avgTip;
+};
+
+// Print average tips
+
+markAvgTip = calculateAvgTip(mark.tips);
+document.write("Mark's Average Tip: " + markAvgTip + "<br>");
+
+johnAvgTip = calculateAvgTip(john.tips);
+document.write("John's Average Tip: " + johnAvgTip + "<br>");
+
+// Family that paid more tips
+
+if (markAvgTip > johnAvgTip) {
+    document.write("Mark's family paid a higher average tip")
+} else if (markAvgTip < johnAvgTip) {
+    document.write("John's family paid a higher average tip")
+} else {
+    document.write("They paid the same average tip");
+};
