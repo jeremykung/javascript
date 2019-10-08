@@ -1,20 +1,29 @@
-// METHODS are FUNCTIONS inside of an OBJECT
+// METHODS are FUNCTIONS attached to OBJECTS
+// 'THIS' points to itself
+year = 2019;
 
-var year = 2019;
-
-// THIS refers the the object it is used in 
 var jeremy = {
-    color: "green",
+    name: 'Jeremy',
     birthYear: 1990,
-    // calculateAge: function() {
+    job: 'Teacher',
+    male: true,
+    // * Normal FUNCTION Synatx
+    // age: function(birthYear) {
+    //     return year - birthYear;
+    // },
+    // ** Using THIS for birthYear
+    // age: function(birthYear) {
     //     return year - this.birthYear;
     // }
-    calculateAge: function() {
+    // *** Using THIS to target local birthYear and to store 'age' in local object
+    calculateAge: function(birthYear) {
         this.age = year - this.birthYear;
     }
 }
 
 // You must run the function once in order for it to work
+// Call the METHOD (function in object)
 jeremy.calculateAge();
 
+// Print to screen
 document.write(jeremy.age);
