@@ -1,0 +1,95 @@
+/* GLOBAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.background {
+    height: 100vh;
+    background-image: url("images/72125578_p0.jpg");
+    /* background-image: url("images/76724192_p5.jpg"); */
+    /* background-image: url("https://cdn.pixabay.com/photo/2017/02/14/03/03/ama-dablam-2064522_1280.jpg");     */
+    background-size: cover;
+    background-position: center;
+}
+
+/* SCOREBOARD */
+
+.scoreboard {
+    position: absolute;
+    left: 25%;
+    top: 15%;
+    width: 50vw;
+    padding: 3em 0;
+    background-color: rgb(255,255,255,0.5);
+    display: flex;
+}
+
+.p1-box {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.p2-box {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* PLAYER SCOREBOARDS */
+
+.name {
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 2em;
+}
+
+.score-wrapper {
+    text-align: center;
+    width: 40%;
+    padding: 2em 0;
+    font-size: 1.2em;
+    justify-content: center;
+}
+
+.score {
+    margin-top: 0.5em;
+    font-size: 2em;
+}
+
+/* ACTIONS */
+
+.actions {
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    width: 20vw;
+    background-color: rgb(255,255,255,0.5);
+}
+
+.roll {
+    text-align: center;
+    padding: 1em;
+}
+
+.roll img {
+    width: 24%;
+}
+
+.hold {
+    text-align: center;
+    padding: 1em;
+}
+
+.hold button {
+    border: none;
+    background: #531717;
+    padding: 1em 3em;
+    color: white;
+}
