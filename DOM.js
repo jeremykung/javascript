@@ -17,7 +17,7 @@ activePlayer = 0;
 
 
 
-// Event for ROLL
+// ROLL
 
 document.querySelector(".roll").addEventListener('click', function() {
     // Anonmyous Function
@@ -26,38 +26,56 @@ document.querySelector(".roll").addEventListener('click', function() {
     // 1. Roll random number between 1 and 6
     var dice = Math.floor(Math.random() * 6 + 1);
     
-    // 2. Display the number in a div
+    // Display dice
     var dicePic = document.querySelector(".dicePic");
-    
     dicePic.style.display = "inline";
     dicePic.src = "images/dice-" + dice + ".png";
     
-    // 3. Add to round score
+    // Create variable for round score div so it is easier to call
     var round = document.querySelector(".p" + activePlayer + "-round");
 
-    // 4. Check roll
+    // Check for 1
     if (dice === 1) {
    
+        // Set round score to 0
         roundScore = 0;
+        // Display 0 on round scoreboard
         round.textContent = roundScore;
-
-        if (activePlayer === 0) {
-            activePlayer += 1;
-        } else {
-            activePlayer -= 1;
-        };
+        
+        switchPlayer();
 
     } else {
+
+        // Add dice number to round score
         roundScore += dice;
+        // Display score on round scoreboard
+        round.textContent = roundScore;
+        
     }
 
-    round.textContent = roundScore;
+    // Check for double 6
+    var lastRoll = dice;
 
-    console.log("player: " + activePlayer);
+    if (lastRoll === 6) {
+        if (dice === 6) {
+            // Erase entire score
+
+            roundScore = 0;
+
+            document.querySelector(".p" + activePlayer + "-total").textContent = roundScore;
+
+            switchPlayer();
+            
+        } else {
+            console.log("All Good");
+        }
+    } else {
+        console.log("All Good");        
+    }
 
 });
 
-// Event for HOLD
+// HOLD
 
 document.querySelector(".hold").addEventListener("click", function() {
     
@@ -71,13 +89,34 @@ document.querySelector(".hold").addEventListener("click", function() {
     roundScore = 0;
     round.textContent = roundScore;
 
-    if (activePlayer === 0) {
-        activePlayer += 1;
-    } else {
-        activePlayer -= 1;
-    };
+    switchPlayer();
 
-    // Win Condition
+    checkWin();
+    
+    console.log("player: " + activePlayer);
+
+});
+
+// RESET Game
+
+document.querySelector(".reset").addEventListener("click", function() {
+
+    // Reset Scores
+    scores = [0,0];
+    document.querySelector(".p0-total").textContent = 0;
+    document.querySelector(".p0-round").textContent = 0;
+    document.querySelector(".p1-total").textContent = 0;
+    document.querySelector(".p1-round").textContent = 0;
+
+    // Reset Interface
+    document.querySelector(".game-over").style.display = "none";
+    document.querySelector(".play-game").style.display = "block";
+
+});
+
+// FUNCTIONS
+
+function checkWin() {
 
     if (scores[0] >= 100) {
 
@@ -104,46 +143,24 @@ document.querySelector(".hold").addEventListener("click", function() {
         // document.querySelector(".win").textContent = nameP1 + " Wins";
 
     };
+}
 
-    console.log("player: " + activePlayer);
+function switchPlayer() {
+    if (activePlayer === 0) {
 
-});
+        activePlayer += 1;
 
-// RESET Game
+        document.querySelector(".p0-box").classList.remove("active");
 
-document.querySelector(".reset").addEventListener("click", function() {
-    scores = [0,0];
+        document.querySelector(".p1-box").classList.add("active");
 
-    document.querySelector(".game-over").style.display = "none";
+    } else {
 
-    document.querySelector(".play-game").style.display = "block";
+        activePlayer -= 1;
 
-    document.querySelector(".p0-total").textContent = 0;
-    document.querySelector(".p0-round").textContent = 0;
-    document.querySelector(".p1-total").textContent = 0;
-    document.querySelector(".p1-round").textContent = 0;
+        document.querySelector(".p1-box").classList.remove("active");
 
-});
+        document.querySelector(".p0-box").classList.add("active");
 
-// switch (true) {
-//     case (scores[0] >= 20):
-//         console.log("Game over");
-//         document.querySelector(".game-over").style.display = "block";
-//         break;
-    
-//     case (scores[1] >= 20):
-//         document.querySelector(".game-over").style.display = "block";
-//         break;
-
-//     default:
-//         break;
-// };
-
-
-
-
-
-
-
-
-    // document.querySelector(".p" + activePlayer + "-round").textContent = dice;
+    };
+}
