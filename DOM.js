@@ -25,8 +25,7 @@ document.querySelector(".roll").addEventListener('click', function() {
     // Exists in the Event Listener only and has no name
 
     // 1. Roll random number between 1 and 6
-    // var dice = Math.floor(Math.random() * 6 + 1);
-    var dice = 6;
+    var dice = Math.floor(Math.random() * 6 + 1);
     
     // Display dice
     var dicePic = document.querySelector(".dicePic");
