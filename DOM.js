@@ -1,8 +1,9 @@
-var scores, roundScores, activePlayer, nameP0, nameP1;
+var scores, roundScores, activePlayer, lastRoll, nameP0, nameP1;
 
 scores = [0,0];
 roundScore = 0; // Counts round score
 activePlayer = 0;
+lastRoll = 0;
 
 
 // CUSTOM NAMES
@@ -24,7 +25,8 @@ document.querySelector(".roll").addEventListener('click', function() {
     // Exists in the Event Listener only and has no name
 
     // 1. Roll random number between 1 and 6
-    var dice = Math.floor(Math.random() * 6 + 1);
+    // var dice = Math.floor(Math.random() * 6 + 1);
+    var dice = 6;
     
     // Display dice
     var dicePic = document.querySelector(".dicePic");
@@ -53,26 +55,28 @@ document.querySelector(".roll").addEventListener('click', function() {
         
     }
 
+    console.log(dice);
+    console.log(lastRoll);
+
     // Check for double 6
-    var lastRoll = dice;
+    if (dice === 6 && lastRoll === 6) {
+    
+        roundScore = 0;
+        round.textContent = roundScore;
 
-    if (lastRoll === 6) {
-        if (dice === 6) {
-            // Erase entire score
+        document.querySelector(".p" + activePlayer + "-total").textContent = roundScore;
 
-            roundScore = 0;
+        switchPlayer();
 
-            document.querySelector(".p" + activePlayer + "-total").textContent = roundScore;
+        dice = 0;
 
-            switchPlayer();
-            
-        } else {
-            console.log("All Good");
-        }
     } else {
-        console.log("All Good");        
+
     }
 
+    lastRoll = dice;
+
+    
 });
 
 // HOLD
@@ -90,6 +94,8 @@ document.querySelector(".hold").addEventListener("click", function() {
     round.textContent = roundScore;
 
     switchPlayer();
+    // Erase lastRoll to reset double six
+    lastRoll = 0;
 
     checkWin();
     
