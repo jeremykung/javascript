@@ -54,9 +54,6 @@ document.querySelector(".roll").addEventListener('click', function() {
         
     }
 
-    console.log(dice);
-    console.log(lastRoll);
-
     // Check for double 6
     if (dice === 6 && lastRoll === 6) {
     

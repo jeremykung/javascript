@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>JS Game</title>
-    <link rel="stylesheet" href="DOM.css">
+    <link rel="stylesheet" href="dice-game-2.css">
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
@@ -41,8 +41,16 @@
         <div class="interface">
             
             <div class="play-game">
+                <div class="winning-score">
+                    <p>Winning Score</p>
+                    <div class="set-score-wrapper">
+                        <input type="text" id="custom-score-input"><button class="set-score" onclick="setScore()">Set</button>
+                    </div>
+                    <div class="show-winning-score"></div>
+                </div>
                 <div class="dice">
-                    <img class="dicePic" src="images/dice-1.png">
+                    <img class="dicePic-0" src="images/dice-1.png">
+                    <img class="dicePic-1" src="images/dice-1.png">
                 </div>
                 <div class="roll">
                     <button>Roll</button>
@@ -59,7 +67,7 @@
         
     </div>
 
-    <script src="DOM.js"></script>
+    <script src="dice-game-2.js"></script>
     
     </body>
 
