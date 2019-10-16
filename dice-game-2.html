@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JS Game</title>
+    <link rel="stylesheet" href="dice-game-2.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="background">
+            
+        <div class="scoreboard">
+            <div class="p0-box active">
+                <div class="p0-name name">Player 1</div>
+                <div class="score-wrapper">
+                    <div class="total-score">Total Score</div>
+                    <div class="p0-total score">0</div>
+                </div>
+                <div class="score-wrapper">
+                    <div class="round-score">Round Score</div>
+                    <div class="p0-round score">0</div>
+                </div>
+            </div>
+            <div class="p1-box">
+                <div class="p1-name name">Player 2</div>
+                <div class="score-wrapper">
+                    <div class="total-score">Total Score</div>
+                    <div class="p1-total score">0</div>
+                </div>
+                <div class="score-wrapper">
+                    <div class="round-score">Round Score</div>
+                    <div class="p1-round score">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="interface">
+            
+            <div class="play-game">
+                <div class="winning-score">
+                    <p>Winning Score</p>
+                    <div class="set-score-wrapper">
+                        <input type="text" id="custom-score-input"><button class="set-score" onclick="setScore()">Set</button>
+                    </div>
+                    <div class="show-winning-score"></div>
+                </div>
+                <div class="dice">
+                    <img class="dicePic-0" src="images/dice-1.png">
+                    <img class="dicePic-1" src="images/dice-1.png">
+                </div>
+                <div class="roll">
+                    <button>Roll</button>
+                </div>
+                <div class="hold"><button>Hold</button></div>
+            </div>
+
+            <div class="game-over">
+                <div class="win">Wins!</div>
+                <div class="reset"><button>Reset</button></div>
+            </div>
+        
+        </div>
+        
+    </div>
+
+    <script src="dice-game-2.js"></script>
+    
+    </body>
+
+</html>

@@ -1,0 +1,190 @@
+/* GLOBAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    --themeColor: #0c3047;
+    /* --themeColor: #531717; */
+
+}
+
+.background {
+    height: 100vh;
+    /* background-image: url("images/72125578_p0.jpg"); */
+    background-image: url("images/76724192_p5.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/* SCOREBOARD */
+
+.scoreboard {
+    position: absolute;
+    left: 25%;
+    top: 10%;
+    width: 50vw;
+    /* padding: 3em 0; */
+    background-color: rgb(255,255,255,0.5);
+    display: flex;
+}
+
+.p0-box {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3em 0;
+}
+
+.p1-box {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3em 0;
+}
+
+.active {
+    background: var(--themeColor);
+    color: white;
+}
+
+/* PLAYER SCOREBOARDS */
+
+.name {
+    width: 100%;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 2em;
+}
+
+.score-wrapper {
+    text-align: center;
+    width: 40%;
+    padding: 1em 0;
+    font-size: 1.2em;
+    justify-content: center;
+}
+
+.score {
+    margin-top: 0.5em;
+    font-size: 2em;
+}
+
+/* ACTIONS */
+
+.interface {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    width: 20vw;
+    background-color: rgb(255,255,255,0.5);
+}
+
+.winning-score {
+    text-align: center;
+    padding: 1em;
+}
+
+.winning-score p {
+    padding: 1em;
+}
+
+#custom-score-input {
+    width: 40%;
+    padding: 1em 0;
+    text-align: center;
+    border: none;
+}
+
+.set-score {
+    background: var(--themeColor);
+    border: none;
+    color: white;
+    width: 40%;
+    padding: 1em 0;
+}
+
+.show-winning-score {
+    font-size: 2em;
+}
+
+.play-game {
+    display: block;
+}
+
+.dice {
+    text-align: center;
+    padding: 1em 0;
+}
+
+.dicePic-0 {
+    width: 32%;
+    padding: 0 1em;
+}
+
+.dicePic-1 {
+    width: 32%;
+    padding: 0 1em;
+}
+
+.roll {
+    text-align: center;
+    padding: 1em;
+}
+
+.roll img {
+    width: 24%;
+}
+
+.hold {
+    text-align: center;
+    padding: 1em;
+}
+
+.hold button {
+    border: none;
+    background: var(--themeColor);
+    padding: 1em 3em;
+    color: white;
+}
+
+.roll button {
+    border: none;
+    background: var(--themeColor);
+    padding: 1em 3em;
+    color: white;
+}
+
+/* GAME OVER */
+
+.game-over {
+    display: none;
+}
+
+.win {
+    font-size: 2em;
+    padding: 1em;
+    text-align: center;
+}
+
+.reset {
+    text-align: center;
+    padding: 1em;
+}
+
+.reset button {
+    border: none;
+    background: var(--themeColor);
+    padding: 1em 3em;
+    color: white;
+}
