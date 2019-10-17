@@ -59,31 +59,14 @@ document.querySelector(".roll").addEventListener('click', function() {
         
     }
 
-    // Check for Snake Eyes (double 1)
+    // Check for Snake Eyes
     if (dice0 === 1 && dice1 === 1) {
         roundScore = 0;
         document.querySelector(".p" + activePlayer + "-total").textContent = 0;
         round.textContent = roundScore;
+        scores[activePlayer] = 0;
         switchPlayer();
     } else {}
-
-    /******************* Double 6 rule from old game *****************
-    // Check for double 6
-    if (dice === 6 && lastRoll === 6) {
-    
-        roundScore = 0;
-        round.textContent = roundScore;
-
-        document.querySelector(".p" + activePlayer + "-total").textContent = roundScore;
-
-        switchPlayer();
-
-        dice = 0;
-
-    } else {}
-
-    lastRoll = dice;
-    */
     
 });
 
