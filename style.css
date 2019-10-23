@@ -9,6 +9,54 @@ a {
 }
 
 /**************************************************
+ Menu 
+**************************************************/
+
+nav {
+    background-color: #142847;
+}
+
+.nav-container {
+    margin: auto;
+    display: flex;
+    width: 80%;
+    /* border: 1px solid red; */
+}
+
+.nav-icon {
+    position: absolute;
+    left: 50%;
+    margin-left: -20px;
+    padding-top: 10px;
+    /* border: 1px solid black; */
+}
+
+.nav-icon img {
+    width: 50px;
+    /* border: 1px solid brown; */
+}
+
+.nav-left {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    /* border: 1px solid blue; */
+}
+
+.nav-right {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    /* border: 1px solid blue; */
+}
+
+nav a {
+    padding: 30px;
+    color: white;
+    /* border: 1px solid green; */
+}
+
+/**************************************************
  DOM Game 
 **************************************************/
 
