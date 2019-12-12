@@ -1,7 +1,7 @@
 var scores, roundScores, activePlayer, lastRoll, winningScore, nameP0, nameP1;
 
-scores = [0,0];
-roundScore = 0; // Counts round score
+scores = [0,0]; // Total Score
+roundScore = 0; // Round Score
 activePlayer = 0;
 lastRoll = 0;
 winningScore = 100;
@@ -40,9 +40,18 @@ document.querySelector(".roll").addEventListener('click', function() {
     // Create variable for round score div so it is easier to call
     var round = document.querySelector(".p" + activePlayer + "-round");
 
-    // Check for 1
-    if (dice0 === 1 || dice1 === 1) {
+    // Check for 1 on ONE die only
+    if (dice0 === 1 && dice1 !== 1) {
    
+        // Set round score to 0
+        roundScore = 0;
+        // Display 0 on round scoreboard
+        round.textContent = roundScore;
+        
+        switchPlayer();
+
+    } else if (dice0 !== 1 && dice1 === 1) {
+
         // Set round score to 0
         roundScore = 0;
         // Display 0 on round scoreboard
@@ -62,9 +71,9 @@ document.querySelector(".roll").addEventListener('click', function() {
     // Check for Snake Eyes
     if (dice0 === 1 && dice1 === 1) {
         roundScore = 0;
-        document.querySelector(".p" + activePlayer + "-total").textContent = 0;
         round.textContent = roundScore;
         scores[activePlayer] = 0;
+        document.querySelector(".p" + activePlayer + "-total").textContent = 0;
         switchPlayer();
     } else {}
     
