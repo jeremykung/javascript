@@ -18,9 +18,15 @@ var Question = function(question, answers, correct) {
             score++;
             console.log("Good Job!");
             console.log("Current Score: " + score);
+            // Ask next random question
+            askRandomQ();
+        } else if (response == 'exit') {
+            alert("Thank you for playing!");
         } else {
             console.log("Try Again");
             console.log("Current Score: " + score);
+            // Ask next random question
+            askRandomQ();
         }
     }
 }
@@ -28,19 +34,28 @@ var Question = function(question, answers, correct) {
 var Q1 = new Question('your age?', [25, 29, 31, 45], 29);
 var Q2 = new Question('your name?', ['jeremy', 'mabel', 'jennifer', 'jessica', 'jenny', 'jiyoung'], 'jeremy');
 var Q3 = new Question('best color?', ['blue', 'red', 'orange', 'green'], 'green');
+var Q4 = new Question('coffee or tea?', ['coffee','tea'], 'tea');
 
-var questionArray = [Q1, Q2, Q3];
+var questionArray = [Q1, Q2, Q3, Q4];
 
-// How to call a random question and access it's ask method?
-function randomQuestion() {
-    console.log(Q1.ask);
-};
+// Math!
+// Math.random() generates a random number
+// Multiply that random number by the array length
+// Math.floor() rounds down
+// Nest that stuff!
 
-randomQuestion();
+// Proof of number
+// console.log(Math.floor(Math.random()*questionArray.length));
 
-// Q1.ask();
-// Q2.ask();
-// Q3.ask();
+// Adding number into array
+// questionArray[Math.floor(Math.random()*questionArray.length)].ask();
+
+function askRandomQ() {
+    questionArray[Math.floor(Math.random()*questionArray.length)].ask();
+}
+
+// Start Button
+document.write("<button class='start-btn' onclick='askRandomQ()'>Start Quiz</button>")
 
 
 
