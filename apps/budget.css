@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+}
+
+/* BUDGET DISPLAY */
+
+header {
+    color: white;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient( rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5) ), url('images/43279238_p0.jpg'); */
+    background-color: rgb(30, 98, 138);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.header-title {
+    font-size: 2em;
+}
+
+.total-budget {
+    font-size: 2em;
+    padding: 1em;
+}
+
+.net-income-container {
+    background-color: rgb(51, 133, 180);
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.net-title {
+    width: 50%;
+}
+
+.net-income-container > * {
+    padding: 1em;
+}
+
+.net-expense-container {
+    background-color: rgb(12, 58, 85);
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.net-expense-container > * {
+    padding: 1em;
+}
+
+/* INPUT BAR */
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: rgb(17, 72, 104);
+}
+
+.input-container > * {
+    padding: 1em;
+    margin: 0 1em;
+    border: none;
+}
+
+/* Remove number input arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+#description {
+    width: 30%;
+}
+
+/* INCOME & EXPENSES LIST */
+
+.list-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "inc-title exp-title"
+    "inc-list exp-list"
+    ;
+    width: 70%;
+    margin: 3em auto;
+
+}
+
+.inc-title {
+    grid-area: inc-title;
+    color: rgb(51, 133, 180);
+    font-size: 1.5em;
+}
+
+.inc-list {
+    grid-area: inc-list;
+}
+
+.exp-title {
+    grid-area: exp-title;
+    color: rgb(17, 72, 104);
+    font-size: 1.5em;
+}
+
+.exp-list {
+    grid-area: exp-list;
+}

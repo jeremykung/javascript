@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Budget App</title>
+    <link rel="stylesheet" href="budget.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Budget Display -->
+    <header>
+        <div class="header-title">Available Budget</div>
+        <div class="total-budget">0</div>
+        <div class="net-income-container">
+            <div class="net-title">Income</div>
+            <div class="net-income">0</div>
+            <div class="net-income-percent">0%</div>
+        </div>
+        <div class="net-expense-container">
+            <div class="net-title">Expense</div>
+            <div class="net-expense">0</div>
+            <div class="net-expense-percent">0%</div>
+        </div>
+    </header>
+    <!-- Input Bar -->
+    <div class="input-container">
+        <select name="type-select" id="type-select">
+            <option value="income">+</option>
+            <option value="expense">-</option>
+        </select>
+        <input type="text" id="description" placeholder="Description">
+        <input type="number" id="value" placeholder="Value">
+        <button class="enter-value-btn">OK</button>
+    </div>
+    <!-- Income & Expenses List -->
+    <div class="list-container">
+        <div class="inc-title">Income</div>
+        <div class="inc-list"></div>
+        <div class="exp-title">Exepenses</div>
+        <div class="exp-list"></div>
+    </div>
+    </div>
+</body>
+</html>
