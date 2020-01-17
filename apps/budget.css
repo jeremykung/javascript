@@ -87,35 +87,67 @@ input[type=number] {
 
 /* INCOME & EXPENSES LIST */
 
-.list-container {
+.list-titles {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "inc-title exp-title"
-    "inc-list exp-list"
-    ;
+    grid-gap: 1em;
     width: 70%;
-    margin: 3em auto;
-
+    margin: 3em auto 2em auto;
 }
 
 .inc-title {
-    grid-area: inc-title;
     color: rgb(51, 133, 180);
     font-size: 1.5em;
 }
 
-.inc-list {
-    grid-area: inc-list;
-}
-
 .exp-title {
-    grid-area: exp-title;
     color: rgb(17, 72, 104);
     font-size: 1.5em;
 }
 
-.exp-list {
-    grid-area: exp-list;
+.list-item-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    width: 70%;
+    margin: 0 auto 5em auto;
+}
+
+.inc-list, .exp-list {
+    display: block;
+}
+
+.inc-item, .exp-item {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    /* display: flex; */
+}
+
+.description {
+    color: rgb(100, 100, 100);
+}
+
+.inc-amt {
+    color: rgb(76, 129, 33);
+}
+
+.exp-amt {
+    color: rgb(145, 45, 45);
+}
+
+.percent {
+    color: rgb(169, 206, 228);
+    font-size: 0.6em;
+    padding: 0.3em;
+    border: 1px solid rgb(31, 64, 82);
+    background-color: rgb(31, 64, 82);
+    border-radius: 10%;
+    width: 3em;
+    height: 1em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.delete-btn {
+    
 }

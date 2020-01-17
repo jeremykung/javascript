@@ -33,15 +33,57 @@
         </select>
         <input type="text" id="description" placeholder="Description">
         <input type="number" id="value" placeholder="Value">
-        <button class="enter-value-btn">OK</button>
+        <button class="enter-value-btn" onclick="addItem()">OK</button>
     </div>
     <!-- Income & Expenses List -->
-    <div class="list-container">
-        <div class="inc-title">Income</div>
-        <div class="inc-list"></div>
-        <div class="exp-title">Exepenses</div>
-        <div class="exp-list"></div>
+        
+        <div class="list-titles">
+            <div class="inc-title">Income</div>
+            <div class="exp-title">Expenses</div>
+        </div>
+
+        <div class="list-item-container">
+            <div class="inc-list">
+                <div class="list-item inc-item">
+                    <div class="description inc-desc">monthly salary</div>
+                    <div class="amount inc-amt">70000</div>
+                    <div class="percent inc-perc">100%</div>
+                </div>
+            </div>
+            <div class="exp-list">
+                <div class="list-item exp-item">
+                    <div class="description exp-desc">groceries</div>
+                    <div class="amount exp-amt">10000</div>
+                    <div class="percent exp-perc">20%</div>
+                    <!-- <div class="delete-btn">delete</div> -->
+                </div>
+            </div>
+        </div>
+
     </div>
-    </div>
+
+    <script src="budget.js"></script>
+
 </body>
 </html>
+
+<!-- 
+    <div class="list-container">
+        <div class="inc-title">Income</div>
+        <div class="inc-list">
+            <div class="list-item inc-item">
+                <div class="description inc-desc">monthly salary</div>
+                <div class="amount inc-amt">70000</div>
+                <div class="percent inc-perc">80%</div>
+            </div>
+        </div>
+        <div class="exp-title">Exepenses</div>
+        <div class="exp-list">
+            <div class="list-item exp-item">
+                <div class="description exp-desc">groceries</div>
+                <div class="amount exp-amt">10000</div>
+                <div class="percent exp-perc">20%</div>
+            </div>
+        </div>
+    </div>
+-->
