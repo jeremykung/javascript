@@ -15,12 +15,12 @@
         <div class="header-title">Available Budget</div>
         <div class="total-budget">0</div>
         <div class="net-income-container">
-            <div class="net-title">Income</div>
+            <div class="net-title">Total Income</div>
             <div class="net-income">0</div>
             <div class="net-income-percent">0%</div>
         </div>
         <div class="net-expense-container">
-            <div class="net-title">Expense</div>
+            <div class="net-title">Total Expenses</div>
             <div class="net-expense">0</div>
             <div class="net-expense-percent">0%</div>
         </div>
@@ -31,8 +31,8 @@
             <option value="income">+</option>
             <option value="expense">-</option>
         </select>
-        <input type="text" id="description" placeholder="Description">
-        <input type="number" id="value" placeholder="Value">
+        <input type="text" id="description" onfocus="this.value=''" placeholder="Description">
+        <input type="number" id="value" onfocus="this.value=''" placeholder="Value">
         <button class="enter-value-btn" onclick="addItem()">OK</button>
     </div>
     <!-- Income & Expenses List -->
@@ -45,17 +45,17 @@
         <div class="list-item-container">
             <div class="inc-list">
                 <div class="list-item inc-item">
-                    <div class="description inc-desc">monthly salary</div>
+                    <!-- <div class="description inc-desc">monthly salary</div>
                     <div class="amount inc-amt">70000</div>
-                    <div class="percent inc-perc">100%</div>
+                    <div class="percent inc-perc">100%</div> -->
                 </div>
             </div>
             <div class="exp-list">
                 <div class="list-item exp-item">
                     <div class="description exp-desc">groceries</div>
-                    <div class="amount exp-amt">10000</div>
+                    <div class="amount exp-amt">-100</div>
                     <div class="percent exp-perc">20%</div>
-                    <!-- <div class="delete-btn">delete</div> -->
+                    <div class="delete-btn">delete</div>
                 </div>
             </div>
         </div>

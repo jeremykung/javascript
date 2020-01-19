@@ -46,6 +46,9 @@ function addItem() {
         document.querySelector('.net-income').innerHTML = incTotal;
         // Update budget
         document.querySelector('.total-budget').innerHTML = incTotal - expTotal;
+        // Update total percents
+        document.querySelector(".net-income-percent").innerHTML = Math.round(incTotal/(incTotal+expTotal)*100) + '%';
+        document.querySelector(".net-expense-percent").innerHTML = Math.round(expTotal/incTotal*100) + '%';
 
 
     } else if (type == "expense") {
@@ -68,17 +71,16 @@ function addItem() {
         document.querySelector('.net-expense').innerHTML = expTotal;
         // Update budget
         document.querySelector('.total-budget').innerHTML = incTotal - expTotal;
-
+        // Update total percents
+        document.querySelector(".net-income-percent").innerHTML = Math.round(incTotal/(incTotal+expTotal)*100) + '%';
+        document.querySelector(".net-expense-percent").innerHTML = Math.round(expTotal/incTotal*100) + '%';
     }
 }
 
-// Remove percentage features for now
-
-for (var i=0; i<incArray.length; i++) {
-    // cycle through values and change DOM percents
-    //
-}
-// document.querySelector(".inc-perc").classList.add(".inc-perc-" + i);
+document.querySelector(".exp-item").addEventListener("click", function() {
+    this.value = 0;
+    this.classList.add('invisible');
+});
 
 /*
 Delete function

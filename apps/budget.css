@@ -123,17 +123,13 @@ input[type=number] {
     /* display: flex; */
 }
 
-.description {
-    color: rgb(100, 100, 100);
+.invisible {
+    display: none;
 }
 
-.inc-amt {
-    color: rgb(76, 129, 33);
-}
-
-.exp-amt {
-    color: rgb(145, 45, 45);
-}
+.description {color: rgb(100, 100, 100);}
+.inc-amt {color: rgb(76, 129, 33);}
+.exp-amt {color: rgb(145, 45, 45);}
 
 .percent {
     color: rgb(169, 206, 228);
