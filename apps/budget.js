@@ -87,3 +87,9 @@ Delete function
 1. set deleted item value to 0 
 2. hide that list item with css
 */
+
+document.querySelector(".list-item").addEventListener('mouseover', showDelete());
+
+function showDelete(event) {
+    event.target.classList.remove
+}

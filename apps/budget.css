@@ -117,14 +117,19 @@ input[type=number] {
     display: block;
 }
 
-.inc-item, .exp-item {
+.list-item {
     display: grid;
     grid-template-columns: 3fr 1fr 1fr;
-    /* display: flex; */
+    transition: 1s;
 }
 
-.invisible {
+.delete-btn {
     display: none;
+}
+
+.list-item:hover {
+    border: 1px solid grey;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
 }
 
 .description {color: rgb(100, 100, 100);}
@@ -142,8 +147,4 @@ input[type=number] {
     height: 1em;
     text-align: center;
     margin-bottom: 1em;
-}
-
-.delete-btn {
-    
 }
