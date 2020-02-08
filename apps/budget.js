@@ -64,8 +64,10 @@ function addItem() {
         // Cycle through percents to update
         for (var i=0; i<expArray.length; i++) {
             // console.log(i);
-            document.querySelector(".exp-list").innerHTML += '<div class="exp-item"><div class="description exp-desc">' + expDescArray[i] + '</div><div class="amount exp-amt">-' + expArray[i] + '</div><div class="percent exp-perc'+expArray[i]+'">' + Math.round(expArray[i]/expTotal*100) + '%</div><div class="delete-btn">delete</div></div>';
+            document.querySelector(".exp-list").innerHTML += '<div class="exp-item"><div class="description exp-desc">' + expDescArray[i] + '</div><div class="amount exp-amt">-' + expArray[i] + '</div><div class="percent exp-perc'+expArray[i]+'">' + Math.round(expArray[i]/expTotal*100) + '%</div></div>';
         }
+
+        // <div class="delete-btn">delete</div>
 
         // Update total expenses
         document.querySelector('.net-expense').innerHTML = expTotal;
